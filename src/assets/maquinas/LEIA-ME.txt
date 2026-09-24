@@ -1,0 +1,24 @@
+Como organizar as fotos
+=======================
+
+Cada pasta representa um grupo que aparece na página. Salve as fotos
+dentro da pasta correspondente:
+
+- 1-foto-perfil-isabelly/          -> foto de perfil da Isabelly, exibida no topo (use apenas 1 foto)
+                                      se a pasta ficar vazia, a página mostra a letra "I" no lugar
+- 2-foto-principal-topo-pagina/    -> foto grande que aparece no topo da página, ao lado do texto de abertura (use apenas 1 foto)
+- 3-fotos-linha-amarela/           -> fotos de máquinas da linha amarela
+- 4-fotos-linha-verde/             -> fotos de máquinas da linha verde
+- 5-fotos-caminhoes-e-carretas/    -> fotos de caminhões e carretas
+
+Regras simples:
+1. Dentro de cada pasta, use nomes numerados para controlar a ordem das
+   fotos, por exemplo: 01.jpg, 02.jpg, 03.jpg (ou 01.png, 01.webp).
+2. Pode colocar quantas fotos quiser em cada pasta (exceto nas pastas 1 e
+   2, que usam só 1 foto).
+3. Formatos aceitos: .jpg, .jpeg, .png, .webp
+4. Depois de adicionar fotos, rode "npm run dev" novamente (ou apenas
+   salve o arquivo) para elas aparecerem na página automaticamente.
+5. Não é necessário editar nenhum código: o carrossel de cada categoria é
+   gerado automaticamente a partir das fotos que estiverem na pasta.
+   As imagens aparecem uma por vez, com setas e indicadores para navegar.
