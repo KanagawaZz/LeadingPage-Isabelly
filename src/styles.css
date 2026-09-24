@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
 
 :root {
   color: #f2f4f7;
@@ -20,12 +20,16 @@ body { margin: 0; min-width: 320px; }
 a { color: inherit; text-decoration: none; }
 .section-shell { margin: 0 auto; max-width: 1240px; padding-left: 32px; padding-right: 32px; }
 .site-header { align-items: center; display: flex; justify-content: space-between; margin: 0 auto; max-width: 1304px; padding: 26px 32px; }
-.brand { align-items: center; display: flex; font-family: Manrope, sans-serif; font-size: 14px; font-weight: 800; gap: 10px; letter-spacing: .14em; }
-.brand-mark { align-items: center; background: var(--accent); border-radius: 50%; color: var(--navy); display: inline-flex; font-size: 13px; height: 26px; justify-content: center; letter-spacing: 0; width: 26px; }
-.brand-photo { border-radius: 50%; height: 26px; object-fit: cover; width: 26px; }
-.header-link { color: var(--cream); font-size: 14px; font-weight: 600; }
+.brand { align-items: center; display: flex; font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700; gap: 11px; letter-spacing: .17em; }
+.brand-mark { align-items: center; background: var(--accent); border-radius: 50%; color: var(--navy); display: inline-flex; font: 700 16px 'Cormorant Garamond', serif; height: 32px; justify-content: center; letter-spacing: 0; width: 32px; }
+.brand-photo { border: 1px solid rgba(201, 230, 91, .55); border-radius: 50%; height: 32px; object-fit: cover; width: 32px; }
+.header-link { align-items: center; color: var(--cream); display: inline-flex; font-size: 14px; font-weight: 600; gap: 8px; line-height: 1; }
 .header-links { align-items: center; display: flex; gap: 22px; }
 .header-link span, .button span { color: var(--accent); margin-left: 7px; }
+.header-link > span { margin-left: 0; }
+.social-icon { fill: none; flex: 0 0 18px; height: 18px; stroke: var(--accent); stroke-width: 1.8; width: 18px; }
+.social-icon path { fill: var(--accent); stroke: none; }
+.social-icon-dot { fill: var(--accent); stroke: none; }
 .highlight-strip { background: rgba(201, 230, 91, .07); border-bottom: 1px solid rgba(201, 230, 91, .16); border-top: 1px solid rgba(201, 230, 91, .16); color: #c5d0d8; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
 .highlight-strip-inner { align-items: center; display: flex; gap: 14px; justify-content: center; min-height: 42px; text-align: center; }
 .highlight-strip-inner span:nth-child(even) { color: var(--accent); }
@@ -99,7 +103,7 @@ h3 { font-size: 21px; letter-spacing: -.035em; }
 .about-photo img { display: block; height: 100%; min-height: 430px; object-fit: cover; width: 100%; }
 .about-initial { align-items: center; color: var(--accent); display: flex; font: 800 150px Manrope, sans-serif; height: 100%; justify-content: center; min-height: 430px; }
 .about-copy > p:not(.eyebrow) { color: var(--muted); font-size: 15px; line-height: 1.65; margin: 22px 0 0; max-width: 500px; }
-.about-link { border-bottom: 1px solid var(--accent); color: var(--cream); display: inline-block; font-size: 14px; font-weight: 700; margin-top: 28px; padding-bottom: 5px; }
+.about-link { align-items: center; border-bottom: 1px solid var(--accent); color: var(--cream); display: inline-flex; font-size: 14px; font-weight: 700; gap: 8px; margin-top: 28px; padding-bottom: 5px; }
 .about-link span { color: var(--accent); margin-left: 6px; }
 .consulting { background: var(--cream); color: var(--navy); }
 .consulting-inner { display: grid; gap: 8%; grid-template-columns: 1fr 1fr; padding-bottom: 95px; padding-top: 95px; }
@@ -111,7 +115,7 @@ h3 { font-size: 21px; letter-spacing: -.035em; }
 .contact { display: flex; justify-content: center; padding-bottom: 110px; padding-top: 110px; text-align: center; }
 .contact > div { margin: 0 auto; max-width: 560px; }
 .contact > div > p:last-child { margin-bottom: 0; }
-.contact-instagram { border-bottom: 1px solid var(--accent); color: var(--cream); display: inline-block; font-size: 14px; font-weight: 700; margin-top: 24px; padding-bottom: 4px; }
+.contact-instagram { align-items: center; border-bottom: 1px solid var(--accent); color: var(--cream); display: inline-flex; font-size: 14px; font-weight: 700; gap: 8px; margin-top: 24px; padding-bottom: 4px; }
 .contact-instagram span { color: var(--accent); margin-left: 6px; }
 .process { padding-bottom: 120px; padding-top: 100px; }
 .process-grid { border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(3, 1fr); }
@@ -135,7 +139,9 @@ h3 { font-size: 21px; letter-spacing: -.035em; }
 .floating-whatsapp span:first-child { align-items: center; border: 1px solid currentColor; border-radius: 50%; display: inline-flex; font-size: 13px; height: 18px; justify-content: center; width: 18px; }
 main:has(.is-visible) .floating-whatsapp, main:has(.is-visible) .floating-instagram { transform: translateY(0); }
 
-.floating-instagram span:first-child { align-items: center; border: 1px solid currentColor; border-radius: 50%; display: inline-flex; font-size: 13px; height: 18px; justify-content: center; width: 18px; }
+.floating-instagram .social-icon, .floating-whatsapp .social-icon { stroke: var(--navy); }
+.floating-instagram .social-icon path, .floating-whatsapp .social-icon path { fill: var(--navy); }
+.floating-instagram .social-icon-dot { fill: var(--navy); }
 .sr-only { height: 1px; margin: -1px; overflow: hidden; position: absolute; width: 1px; clip: rect(0, 0, 0, 0); }
 @keyframes carousel-fade { from { opacity: 0; transform: scale(1.02); } to { opacity: 1; transform: scale(1); } }
 
@@ -155,6 +161,8 @@ main:has(.is-visible) .floating-whatsapp, main:has(.is-visible) .floating-instag
 @media (max-width: 760px) {
   .section-shell { padding-left: 20px; padding-right: 20px; }
   .site-header { padding: 22px 20px; }
+  .brand { font-size: 16px; gap: 9px; }
+  .brand-mark, .brand-photo { height: 30px; width: 30px; }
   .header-link { font-size: 12px; }
   .header-links { gap: 12px; }
   .highlight-strip-inner { gap: 7px; justify-content: flex-start; min-height: 48px; overflow: hidden; white-space: nowrap; }

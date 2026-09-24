@@ -9,6 +9,24 @@ const whatsappMessage = encodeURIComponent(
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 const instagramLink = 'https://www.instagram.com/isabelly_rufino?stkn=cXdqbXp0b2R3cDVq';
 
+function InstagramIcon() {
+  return (
+    <svg className="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" />
+      <circle cx="12" cy="12" r="4.1" />
+      <circle className="social-icon-dot" cx="17.4" cy="6.7" r="1" />
+    </svg>
+  );
+}
+
+function WhatsAppIcon() {
+  return (
+    <svg className="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20.2 3.8A11.55 11.55 0 0 0 12 0.4C5.62.4.43 5.59.43 11.97c0 2.03.53 4.02 1.54 5.77L.33 23.6l6-1.57a11.55 11.55 0 0 0 5.67 1.46h.01c6.38 0 11.56-5.19 11.56-11.57 0-3.1-1.2-6-3.37-8.12Zm-8.2 17.71h-.01a9.58 9.58 0 0 1-4.88-1.34l-.35-.21-3.56.93.95-3.47-.23-.36a9.57 9.57 0 0 1-1.47-5.08c0-5.27 4.29-9.56 9.57-9.56 2.55 0 4.95 1 6.76 2.81a9.51 9.51 0 0 1 2.8 6.77c0 5.27-4.29 9.56-9.58 9.56Zm5.25-7.17c-.29-.15-1.69-.83-1.95-.92-.26-.1-.45-.15-.64.15-.19.29-.73.92-.9 1.1-.16.2-.33.22-.62.07-1.7-.85-2.82-1.52-3.94-3.44-.3-.52.3-.48.86-1.59.1-.2.05-.37-.03-.52-.08-.15-.64-1.55-.88-2.12-.23-.56-.47-.48-.64-.49h-.54c-.19 0-.5.07-.76.37-.26.29-1 .98-1 2.4 0 1.42 1.03 2.8 1.17 2.99.15.19 2.03 3.1 4.92 4.35.69.3 1.22.48 1.64.62.69.22 1.32.19 1.82.12.55-.08 1.69-.69 1.93-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34Z" />
+    </svg>
+  );
+}
+
 const categories = [
   {
     title: 'Linha amarela',
@@ -157,10 +175,10 @@ function App() {
         </a>
         <nav className="header-links" aria-label="Canais de contato">
           <a className="header-link" href={instagramLink} target="_blank" rel="noreferrer">
-            Instagram <span aria-hidden="true">↗</span>
+            <InstagramIcon /> <span>Instagram</span>
           </a>
           <a className="header-link" href={whatsappLink} target="_blank" rel="noreferrer">
-            Falar no WhatsApp <span aria-hidden="true">↗</span>
+            <WhatsAppIcon /> <span>Falar no WhatsApp</span>
           </a>
         </nav>
       </header>
@@ -286,7 +304,7 @@ function App() {
           <h2>Atendimento próximo para você negociar com confiança.</h2>
           <p>Meu objetivo é entender o que você precisa e ajudar a encontrar uma solução que combine com o seu momento e com a sua operação.</p>
           <p>Conte comigo para consultar opções, esclarecer condições e acompanhar os próximos passos com transparência.</p>
-          <a className="about-link" href={instagramLink} target="_blank" rel="noreferrer">Conheça mais no Instagram <span aria-hidden="true">↗</span></a>
+          <a className="about-link" href={instagramLink} target="_blank" rel="noreferrer"><InstagramIcon /> Conheça mais no Instagram</a>
         </div>
       </section>
 
@@ -368,7 +386,7 @@ function App() {
           <h2>Me diga o que você procura.</h2>
           <p>Use o WhatsApp no topo da página para receber as opções disponíveis e as condições atuais.</p>
           <a className="contact-instagram" href={instagramLink} target="_blank" rel="noreferrer">
-            Acompanhe novidades no Instagram <span aria-hidden="true">↗</span>
+            <InstagramIcon /> Acompanhe novidades no Instagram
           </a>
         </div>
       </section>
@@ -378,11 +396,11 @@ function App() {
         <span>Atendimento em todo o Brasil</span>
       </footer>
       <a className="floating-whatsapp" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Falar com Isabelly pelo WhatsApp">
-        <span aria-hidden="true">◌</span>
+        <WhatsAppIcon />
         <span>WhatsApp</span>
       </a>
       <a className="floating-instagram" href={instagramLink} target="_blank" rel="noreferrer" aria-label="Visitar o Instagram da Isabelly">
-        <span aria-hidden="true">◎</span>
+        <InstagramIcon />
         <span>Instagram</span>
       </a>
     </main>
