@@ -158,7 +158,16 @@ function App() {
   }, []);
 
   return (
-    <main>
+    <>
+      <div className="viewport-blur" aria-hidden="true">
+      <span className="viewport-blur-layer viewport-blur-layer-1" />
+      <span className="viewport-blur-layer viewport-blur-layer-2" />
+      <span className="viewport-blur-layer viewport-blur-layer-3" />
+      <span className="viewport-blur-layer viewport-blur-layer-4" />
+      <span className="viewport-blur-layer viewport-blur-layer-5" />
+      <span className="viewport-blur-tint" />
+      </div>
+      <main>
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="Voltar ao início">
           {profileImages[0] && !profileImageFailed ? (
@@ -403,7 +412,8 @@ function App() {
         <InstagramIcon />
         <span>Instagram</span>
       </a>
-    </main>
+      </main>
+    </>
   );
 }
 
