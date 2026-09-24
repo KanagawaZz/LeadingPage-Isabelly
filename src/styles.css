@@ -18,14 +18,20 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; min-width: 320px; }
 a { color: inherit; text-decoration: none; }
-.viewport-blur { bottom: 0; height: min(90px, 12dvh); left: 0; padding-bottom: env(safe-area-inset-bottom); pointer-events: none; position: fixed; right: 0; z-index: 4; }
+.viewport-blur { bottom: 0; height: min(90px, 12vh); height: min(90px, 12dvh); isolation: isolate; left: 0; padding-bottom: env(safe-area-inset-bottom); pointer-events: none; position: fixed; right: 0; transform: translateZ(0); z-index: 4; }
 .viewport-blur-layer, .viewport-blur-tint { inset: 0; pointer-events: none; position: absolute; }
 .viewport-blur-layer { -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
-.viewport-blur-layer-1 { -webkit-backdrop-filter: blur(1px); backdrop-filter: blur(1px); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 45%, #000 100%); mask-image: linear-gradient(to bottom, transparent 0%, transparent 45%, #000 100%); }
-.viewport-blur-layer-2 { -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); -webkit-mask-image: linear-gradient(to bottom, transparent 12%, transparent 50%, #000 100%); mask-image: linear-gradient(to bottom, transparent 12%, transparent 50%, #000 100%); }
-.viewport-blur-layer-3 { -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); -webkit-mask-image: linear-gradient(to bottom, transparent 28%, transparent 60%, #000 100%); mask-image: linear-gradient(to bottom, transparent 28%, transparent 60%, #000 100%); }
-.viewport-blur-layer-4 { -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); -webkit-mask-image: linear-gradient(to bottom, transparent 45%, transparent 72%, #000 100%); mask-image: linear-gradient(to bottom, transparent 45%, transparent 72%, #000 100%); }
-.viewport-blur-layer-5 { -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); -webkit-mask-image: linear-gradient(to bottom, transparent 62%, transparent 82%, #000 100%); mask-image: linear-gradient(to bottom, transparent 62%, transparent 82%, #000 100%); }
+.viewport-blur-layer-1 { -webkit-backdrop-filter: blur(1px); backdrop-filter: blur(1px); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 100%); mask-image: linear-gradient(to bottom, transparent 0%, #000 100%); }
+.viewport-blur-layer-2 { -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 100%); mask-image: linear-gradient(to bottom, transparent 0%, #000 100%); }
+.viewport-blur-layer-3 { -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 100%); mask-image: linear-gradient(to bottom, transparent 0%, #000 100%); }
+.viewport-blur-layer-4 { -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 100%); mask-image: linear-gradient(to bottom, transparent 0%, #000 100%); }
+.viewport-blur-layer-5 { -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 100%); mask-image: linear-gradient(to bottom, transparent 0%, #000 100%); }
+.viewport-blur-layer-1, .viewport-blur-layer-2, .viewport-blur-layer-3, .viewport-blur-layer-4, .viewport-blur-layer-5 { bottom: 0; inset: auto 0 0; }
+.viewport-blur-layer-1 { height: 90px; }
+.viewport-blur-layer-2 { height: 72px; }
+.viewport-blur-layer-3 { height: 54px; }
+.viewport-blur-layer-4 { height: 36px; }
+.viewport-blur-layer-5 { height: 18px; }
 .viewport-blur-tint { background: linear-gradient(to bottom, rgba(7, 21, 38, 0) 0%, rgba(7, 21, 38, .015) 35%, rgba(7, 21, 38, .18) 68%, rgba(7, 21, 38, .72) 92%, var(--navy) 100%); }
 .section-shell { margin: 0 auto; max-width: 1240px; padding-left: 32px; padding-right: 32px; }
 .site-header { align-items: center; display: flex; justify-content: space-between; margin: 0 auto; max-width: 1304px; padding: 26px 32px; }
